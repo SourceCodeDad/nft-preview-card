@@ -1,0 +1,152 @@
+:root {
+    --mainBG:hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --softblue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background-color: var(--mainBG);
+}
+
+body {
+    font-size: 18px;
+    font-family: "Outfit";
+    min-width: 375px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+}
+
+strong {
+    color: var(--white);
+}
+
+.mainCard {
+    background-color: var(--cardBG);
+    border-radius: 25px;
+    padding: 25px; 
+}
+
+#nftImageContainer {
+    cursor: pointer;
+    position: relative;
+}
+
+#nftImage {
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:100%;
+    max-height:100%;
+    position: relative;
+    cursor: pointer;
+}
+
+#nftImageContainer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: var(--cyan);
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#nftImageContainer:hover {
+    opacity: 0.7;
+}
+
+#nftImageContainer:hover::after {
+    opacity: 0.9;
+}
+
+.mainCard h1 {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.mainCard h1:hover {
+    color: var(--cyan);
+}
+
+.mainCard p {
+    color: var(--softblue);
+}
+
+#bottomSection p {
+    display: inline-block;
+    position: relative;
+}
+
+#bottomSection p:nth-child(2) {
+    position: absolute;
+    right: 55px;
+    margin-left: 5px;
+}
+
+#bottomSection p:first-of-type {
+    color: var(--cyan);
+}
+
+#bottomSection img {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid var(--line); 
+}
+
+.cardFooter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+.cardFooter img {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.cardFooter p {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.cardFooter strong{
+    cursor: pointer;
+}
+
+.cardFooter strong:hover {
+    color: var(--cyan);
+}
